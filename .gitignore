@@ -1,52 +1,16 @@
-# Prerequisites
-*.d
+# 1. Ігнорувати все
+*
 
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
+# 2. Не ігнорувати сам `.gitignore` (щоб він не пропав із репозиторію)
+!.gitignore
 
-# Linker output
-*.ilk
-*.map
-*.exp
+# 3. Розблокувати (whitelist) окремі файли/теки, які потрібні:
+#!Core/
+#!Drivers/
+#!MyImportantFile.md
+!main.c
+!STM32F411CEU6_BLACK_PILL_GPIO_speed_demo.ioc
 
-# Precompiled Headers
-*.gch
-*.pch
-
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
-
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
-
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
-
-# Debug files
-*.dSYM/
-*.su
-*.idb
-*.pdb
-
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
+# 4. Якщо потрібно, можна відмінити ігнорування файлів певного типу 
+# (наприклад, конфігурацій .yaml):
+#!*.yaml
